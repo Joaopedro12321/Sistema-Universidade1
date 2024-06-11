@@ -1,4 +1,5 @@
 # Sistema-Universidade1
+'****
 CREATE DATABASE universidade;
 USE universidade;
 
@@ -22,6 +23,7 @@ CREATE TABLE Alunos (
 );
 
 2****
+
 CREATE PROCEDURE sp_inserir_curso
     @nome_curso VARCHAR(50),
     @duracao INT,
@@ -34,6 +36,7 @@ END
 GO
 
 3***
+
 CREATE FUNCTION fn_obter_id_curso
     @nome_curso VARCHAR(50),
     @id_area INT
@@ -48,7 +51,9 @@ BEGIN
     RETURN @id_curso
 END
 GO
+
 4***
+
 CREATE PROCEDURE sp_matricular_aluno
     @nome VARCHAR(50),
     @id_curso INT
@@ -68,7 +73,9 @@ BEGIN
     END
 END
 GO
+
 5***
+
 EXEC sp_inserir_curso 'Engenharia Civil', 4
 EXEC sp_inserir_curso 'Direito', 5 
 EXEC sp_inserir_curso 'Medicina Veterinária', 1
